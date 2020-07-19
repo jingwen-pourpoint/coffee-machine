@@ -2,7 +2,7 @@ package com;
 
 import java.util.Scanner;
 
-public class CoffeeMachine {
+public class CoffeeMachineFinal {
     enum State {
         MENU, FILL_WATER, FILL_MILK, FILL_BEANS, FILL_CUPS, BUY, EXIT
     }
@@ -14,7 +14,7 @@ public class CoffeeMachine {
     private int money;
     private State state;
 
-    public CoffeeMachine(int water, int milk, int beans, int cups, int money) {
+    public CoffeeMachineFinal(int water, int milk, int beans, int cups, int money) {
         this.water = water;
         this.milk = milk;
         this.beans = beans;
@@ -166,7 +166,7 @@ public class CoffeeMachine {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CoffeeMachine coffeeMachine = new CoffeeMachine(400, 540, 120, 9, 550);
+        CoffeeMachineFinal coffeeMachine = new CoffeeMachineFinal(400, 540, 120, 9, 550);
 
         while (coffeeMachine.state != State.EXIT) {
             coffeeMachine.displayNextAction();
